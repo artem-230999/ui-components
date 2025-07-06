@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <label class="file-upload">
+    <input class="file-upload__input" type="file" id="file" name="file">
+    <span class="file-upload__button">Выбрать файл</span>
+    <span class="file-upload__label">Файл не выбран</span>
+  </label>
+  
+
+  <script>
+    const input = document.querySelector('.file-upload__input')
+    const label = document.querySelector('.file-upload__label')
+
+    input.addEventListener('change', () => {
+      console.log(input.files);
+      const a = [...input.files].map(f => f.name);
+      console.log(a);
+      
+
+      label.textContent = input.files.length > 0 ? a.join(',') : "Файл не выбран";
+    });
+  </script>
+</body>
+</html>

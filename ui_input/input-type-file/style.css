@@ -1,0 +1,36 @@
+body {
+  padding: 100px;
+}
+
+
+.file-upload {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.file-upload__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.file-upload__input:focus + .file-upload__button {
+  outline: 2x solid #007bff;
+  outline-offset: 3px;
+}
+.file-upload__button {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.file-upload__label {
+  font-size: 20px;
+  color: #555;
+}
